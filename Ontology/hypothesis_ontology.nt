@@ -1,0 +1,41 @@
+<http://test.org/myonto.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://test.org/myonto.owl#Hypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://test.org/myonto.owl#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://test.org/myonto.owl#NamedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://test.org/myonto.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://test.org/myonto.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://test.org/myonto.owl#NamedEntitySet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://test.org/myonto.owl#NamedEntitySet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://test.org/myonto.owl#containsEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://test.org/myonto.owl#containsEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://test.org/myonto.owl#containsEntity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://test.org/myonto.owl#Hypothesis> .
+<http://test.org/myonto.owl#containsEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://test.org/myonto.owl#NamedEntitySet> .
+<http://test.org/myonto.owl#hasHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://test.org/myonto.owl#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#part> .
+<http://test.org/myonto.owl#hasHypothesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://test.org/myonto.owl#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#range> <http://test.org/myonto.owl#Hypothesis> .
+<http://test.org/myonto.owl#includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://test.org/myonto.owl#includes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://test.org/myonto.owl#NamedEntitySet> .
+<http://test.org/myonto.owl#includes> <http://www.w3.org/2000/01/rdf-schema#range> <http://test.org/myonto.owl#NamedEntity> .
+_:185 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:185 <http://www.w3.org/2002/07/owl#onProperty> <http://test.org/myonto.owl#includes> .
+_:185 <http://www.w3.org/2002/07/owl#onClass> <http://test.org/myonto.owl#NamedEntity> .
+<http://test.org/myonto.owl#NamedEntitySet> <http://www.w3.org/2002/07/owl#equivalentClass> _:185 .
+_:186 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:186 <http://www.w3.org/2002/07/owl#onProperty> <http://test.org/myonto.owl#containsEntity> .
+_:186 <http://www.w3.org/2002/07/owl#onClass> <http://test.org/myonto.owl#NamedEntitySet> .
+<http://test.org/myonto.owl#Hypothesis> <http://www.w3.org/2002/07/owl#equivalentClass> _:186 .
+<http://test.org/myonto.owl#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Hypothesis"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#Hypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "Paper's hypothesis."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Named Entity"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Named entity included in the paper's abstract."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#NamedEntitySet> <http://www.w3.org/2000/01/rdf-schema#label> "Named Entity set"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#NamedEntitySet> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of entities included in the paper's abstract."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#containsEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Resource representing a hypothesis's entity set."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#containsEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Links hypothesis with its entity set."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#label> "Resource representing a document's hypothesis entity."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#hasHypothesis> <http://www.w3.org/2000/01/rdf-schema#comment> "Links document with its hypothesis entity."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#includes> <http://www.w3.org/2000/01/rdf-schema#label> "Resource representing a Named Entity in the set."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://test.org/myonto.owl#includes> <http://www.w3.org/2000/01/rdf-schema#comment> "Links Named Entity set with its elements."^^<http://www.w3.org/2001/XMLSchema#string> .
+_:185 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:186 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .

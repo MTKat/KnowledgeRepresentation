@@ -1,0 +1,52 @@
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix hypothesis: <http://test.org/myonto.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://test.org/myonto.owl> a owl:Ontology .
+
+hypothesis:hasHypothesis a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Resource representing a document's hypothesis entity."^^xsd:string ;
+    rdfs:comment "Links document with its hypothesis entity."^^xsd:string ;
+    rdfs:range hypothesis:Hypothesis ;
+    rdfs:subPropertyOf frbr:part .
+
+hypothesis:containsEntity a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Resource representing a hypothesis's entity set."^^xsd:string ;
+    rdfs:comment "Links hypothesis with its entity set."^^xsd:string ;
+    rdfs:domain hypothesis:Hypothesis ;
+    rdfs:range hypothesis:NamedEntitySet .
+
+hypothesis:includes a owl:ObjectProperty ;
+    rdfs:label "Resource representing a Named Entity in the set."^^xsd:string ;
+    rdfs:comment "Links Named Entity set with its elements."^^xsd:string ;
+    rdfs:domain hypothesis:NamedEntitySet ;
+    rdfs:range hypothesis:NamedEntity .
+
+hypothesis:Hypothesis a owl:Class ;
+    rdfs:label "Hypothesis"^^xsd:string ;
+    rdfs:comment "Paper's hypothesis."^^xsd:string ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onClass hypothesis:NamedEntitySet ;
+            owl:onProperty hypothesis:containsEntity ;
+            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+
+hypothesis:NamedEntity a owl:Class ;
+    rdfs:label "Named Entity"^^xsd:string ;
+    rdfs:comment "Named entity included in the paper's abstract."^^xsd:string ;
+    rdfs:subClassOf owl:Thing,
+        <http://www.w3.org/ns/prov#Entity> .
+
+hypothesis:NamedEntitySet a owl:Class ;
+    rdfs:label "Named Entity set"^^xsd:string ;
+    rdfs:comment "Set of entities included in the paper's abstract."^^xsd:string ;
+    rdfs:subClassOf owl:Thing ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass hypothesis:NamedEntity ;
+            owl:onProperty hypothesis:includes ] .
+

@@ -6,47 +6,56 @@
 
 <http://test.org/myonto.owl> a owl:Ontology .
 
+hypothesis:contains a owl:ObjectProperty ;
+    rdfs:label "Resource representing a hypothesis's entity set."^^xsd:string ;
+    rdfs:comment "Links hypothesis with its entity set."^^xsd:string ;
+    rdfs:domain hypothesis:Hypothesis .
+
 hypothesis:hasHypothesis a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "Resource representing a document's hypothesis entity."^^xsd:string ;
-    rdfs:comment "Links document with its hypothesis entity."^^xsd:string ;
+    rdfs:comment "Links paper with its hypothesis entity."^^xsd:string ;
+    rdfs:domain hypothesis:Paper ;
     rdfs:range hypothesis:Hypothesis ;
-    rdfs:subPropertyOf frbr:part .
+    rdfs:subPropertyOf frbr:part ;
+    owl:inverseOf hypothesis:isHypothesisOf .
 
-hypothesis:containsEntity a owl:FunctionalProperty,
+hypothesis:hasProvenance a owl:FunctionalProperty,
         owl:ObjectProperty ;
-    rdfs:label "Resource representing a hypothesis's entity set."^^xsd:string ;
-    rdfs:comment "Links hypothesis with its entity set."^^xsd:string ;
-    rdfs:domain hypothesis:Hypothesis ;
-    rdfs:range hypothesis:NamedEntitySet .
+    rdfs:label "Resource representing a paper's provenance."^^xsd:string ;
+    rdfs:comment "Links paper with its provenance."^^xsd:string ;
+    rdfs:domain hypothesis:Paper ;
+    rdfs:range hypothesis:Provenance ;
+    owl:inverseOf hypothesis:isProvenanceOf .
 
-hypothesis:includes a owl:ObjectProperty ;
-    rdfs:label "Resource representing a Named Entity in the set."^^xsd:string ;
-    rdfs:comment "Links Named Entity set with its elements."^^xsd:string ;
-    rdfs:domain hypothesis:NamedEntitySet ;
-    rdfs:range hypothesis:NamedEntity .
+hypothesis:isHypothesisOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Resource representing a hypothesis' paper."^^xsd:string ;
+    rdfs:comment "Links hypothesis with paper it comes from."^^xsd:string ;
+    rdfs:domain hypothesis:Hypothesis ;
+    rdfs:range hypothesis:Paper ;
+    owl:inverseOf hypothesis:hasHypothesis .
+
+hypothesis:isProvenanceOf a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Resource representing a provenance's paper."^^xsd:string ;
+    rdfs:comment "Links provenance with the paper it is provenance of."^^xsd:string ;
+    rdfs:domain hypothesis:Provenance ;
+    rdfs:range hypothesis:Paper ;
+    owl:inverseOf hypothesis:hasProvenance .
+
+hypothesis:Provenance a owl:Class ;
+    rdfs:label "Provenance"^^xsd:string ;
+    rdfs:comment "Provenance of the paper."^^xsd:string ;
+    rdfs:subClassOf owl:Thing .
 
 hypothesis:Hypothesis a owl:Class ;
     rdfs:label "Hypothesis"^^xsd:string ;
     rdfs:comment "Paper's hypothesis."^^xsd:string ;
-    rdfs:subClassOf owl:Thing ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onClass hypothesis:NamedEntitySet ;
-            owl:onProperty hypothesis:containsEntity ;
-            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ] .
+    rdfs:subClassOf owl:Thing .
 
-hypothesis:NamedEntity a owl:Class ;
-    rdfs:label "Named Entity"^^xsd:string ;
-    rdfs:comment "Named entity included in the paper's abstract."^^xsd:string ;
-    rdfs:subClassOf owl:Thing,
-        <http://www.w3.org/ns/prov#Entity> .
-
-hypothesis:NamedEntitySet a owl:Class ;
-    rdfs:label "Named Entity set"^^xsd:string ;
-    rdfs:comment "Set of entities included in the paper's abstract."^^xsd:string ;
-    rdfs:subClassOf owl:Thing ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass hypothesis:NamedEntity ;
-            owl:onProperty hypothesis:includes ] .
+hypothesis:Paper a owl:Class ;
+    rdfs:label "Research paper or article"^^xsd:string ;
+    rdfs:comment "General class for all papers"^^xsd:string ;
+    rdfs:subClassOf owl:Thing .
 

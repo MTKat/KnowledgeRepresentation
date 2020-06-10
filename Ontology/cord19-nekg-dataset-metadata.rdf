@@ -10,147 +10,147 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:schema="http://schema.org/"
 >
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/xR2RML">
-    <foaf:homepage rdf:resource="https://github.com/frmichel/morph-xr2rml/"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
-    <schema:author>Franck Michel</schema:author>
-    <dct:description>Implementation of the xR2RML mapping language for MongoDB</dct:description>
-    <owl:versionInfo>1.1-RC2</owl:versionInfo>
-    <rdfs:label>Morph-xR2RML</rdfs:label>
-    <dct:licence rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
-    <dct:title>Morph-xR2RML</dct:title>
-    <schema:subjectOf rdf:resource="http://ns.inria.fr/covid19/hal01207828"/>
-    <dce:creator>Franck Michel</dce:creator>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/cord19v6">
-    <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-03</schema:datePublished>
-    <dct:title>COVID-19 Open Research Dataset (CORD-19)</dct:title>
-    <owl:versionInfo>6</owl:versionInfo>
-    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-03</dct:issued>
-    <schema:name>COVID-19 Open Research Dataset (CORD-19)</schema:name>
-    <schema:url rdf:resource="https://www.kaggle.com/dataset/08dd9ead3afd4f61ef246bfd6aee098765a19d9f6dbf514f0142965748be859b/version/6"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    <rdf:type rdf:resource="http://schema.org/Dataset"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://ns.inria.fr/covid19/dataset-1-0">
-    <dct:subject>NER</dct:subject>
+    <schema:keywords>covid19</schema:keywords>
+    <dct:subject>annotation</dct:subject>
     <dce:publisher rdf:resource="http://univ-cotedazur.fr"/>
-    <schema:publisher rdf:resource="https://www.inria.fr"/>
-    <dct:description>This RDF dataset describes the named entities identified in the research papers of the CORD-19 corpus. To identify and disambiguate the named entities, several tools have been used: NCBO BioPortal annotator, Entity-fishing (links to Wikidata) and DBpedia Spotlight (links to DBpedia).</dct:description>
-    <owl:versionInfo>1.0</owl:versionInfo>
+    <prov:wasGeneratedBy rdf:resource="http://ns.inria.fr/covid19/RdfGeneration"/>
+    <schema:keywords>literature</schema:keywords>
+    <prov:wasDerivedFrom rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+    <schema:licence rdf:resource="http://opendatacommons.org/licenses/by/1.0"/>
+    <dct:subject>named entity</dct:subject>
+    <schema:keywords>annotation</schema:keywords>
+    <rdf:type rdf:resource="http://schema.org/Dataset"/>
+    <dct:title>CORD-19 Named Entities Knowledge Graph (CORD19-NEKG)</dct:title>
+    <schema:isBasedOn rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+    <schema:keywords>virus</schema:keywords>
+    <schema:keywords>corona</schema:keywords>
+    <dce:publisher rdf:resource="https://www.cnrs.fr"/>
+    <dct:licence rdf:resource="http://opendatacommons.org/licenses/by/1.0"/>
     <dct:subject>virus</dct:subject>
     <schema:author rdf:resource="https://team.inria.fr/wimmics/"/>
-    <dct:subject>named entity</dct:subject>
     <schema:keywords>cord19</schema:keywords>
-    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
-    <schema:isBasedOn rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
-    <schema:publisher rdf:resource="http://univ-cotedazur.fr"/>
-    <schema:keywords>NER</schema:keywords>
-    <prov:wasDerivedFrom rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+    <dct:subject>NER</dct:subject>
+    <dct:description>This RDF dataset describes the named entities identified in the research papers of the CORD-19 corpus. To identify and disambiguate the named entities, several tools have been used: NCBO BioPortal annotator, Entity-fishing (links to Wikidata) and DBpedia Spotlight (links to DBpedia).</dct:description>
     <dct:subject>named entity recognition</dct:subject>
-    <schema:keywords>virus</schema:keywords>
-    <schema:keywords>literature</schema:keywords>
-    <dct:subject>annotation</dct:subject>
     <schema:keywords>named entity</schema:keywords>
-    <dce:publisher rdf:resource="https://www.cnrs.fr"/>
-    <schema:keywords>covid19</schema:keywords>
-    <prov:wasGeneratedBy rdf:resource="http://ns.inria.fr/covid19/RdfGeneration"/>
-    <dct:creator rdf:resource="https://team.inria.fr/wimmics/"/>
-    <dct:licence rdf:resource="http://opendatacommons.org/licenses/by/1.0"/>
     <schema:keywords>named entity recognition</schema:keywords>
-    <rdf:type rdf:resource="http://schema.org/Dataset"/>
-    <dct:subject>literature</dct:subject>
-    <schema:keywords>annotation</schema:keywords>
-    <schema:keywords>corona</schema:keywords>
-    <schema:licence rdf:resource="http://opendatacommons.org/licenses/by/1.0"/>
-    <dct:subject>covid19</dct:subject>
-    <schema:publisher rdf:resource="https://www.cnrs.fr"/>
-    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-09</dct:issued>
-    <prov:wasGeneratedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-09</prov:wasGeneratedAtTime>
-    <dct:title>CORD-19 Named Entities Knowledge Graph (CORD19-NEKG)</dct:title>
-    <dce:publisher rdf:resource="https://www.inria.fr"/>
+    <owl:versionInfo>1.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-    <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-09</schema:datePublished>
+    <dct:subject>covid19</dct:subject>
+    <schema:keywords>NER</schema:keywords>
+    <dct:creator rdf:resource="https://team.inria.fr/wimmics/"/>
     <schema:name>CORD-19 Named Entities Knowledge Graph (CORD19-NEKG)</schema:name>
-    <dct:subject>corona</dct:subject>
+    <dct:subject>literature</dct:subject>
     <dct:subject>cord19</dct:subject>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://www.inria.fr">
-    <schema:name>Inria</schema:name>
-    <foaf:name>Inria</foaf:name>
+    <dce:publisher rdf:resource="https://www.inria.fr"/>
+    <schema:publisher rdf:resource="https://www.inria.fr"/>
+    <schema:publisher rdf:resource="http://univ-cotedazur.fr"/>
+    <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-09</schema:datePublished>
+    <schema:publisher rdf:resource="https://www.cnrs.fr"/>
+    <prov:wasGeneratedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-09</prov:wasGeneratedAtTime>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-09</dct:issued>
+    <dct:subject>corona</dct:subject>
   </rdf:Description>
   <rdf:Description rdf:about="http://ns.inria.fr/covid19/RdfGeneration">
-    <rdfs:label>RDF generation process</rdfs:label>
-    <dct:description>Transformation of the CORD-19 annotations into RDF using the Morph-xR2RML mapping pocessing engine</dct:description>
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     <dct:title>RDF generation process</dct:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     <prov:wasAssociatedWith rdf:resource="http://ns.inria.fr/covid19/xR2RML"/>
+    <dct:description>Transformation of the CORD-19 annotations into RDF using the Morph-xR2RML mapping pocessing engine</dct:description>
+    <rdfs:label>RDF generation process</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://ns.inria.fr/covid19/hal01207828">
+    <schema:author>Catherine Faron Zucker</schema:author>
     <dce:creator>Catherine Faron Zucker</dce:creator>
-    <dce:creator>Franck Michel</dce:creator>
+    <dct:title>Translation of Relational and Non-Relational Databases into RDF with xR2RML</dct:title>
+    <dce:creator>Johan Montagnat</dce:creator>
+    <rdf:type rdf:resource="http://purl.org/ontology/bibo/AcademicArticle"/>
     <schema:name>Translation of Relational and Non-Relational Databases into RDF with xR2RML</schema:name>
     <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015-01-01</schema:datePublished>
-    <schema:author>Catherine Faron Zucker</schema:author>
-    <rdf:type rdf:resource="http://purl.org/ontology/bibo/AcademicArticle"/>
+    <schema:sameAs rdf:resource="https://hal.archives-ouvertes.fr/hal-01207828"/>
+    <schema:about rdf:resource="http://ns.inria.fr/covid19/xR2RML"/>
+    <dce:creator>Franck Michel</dce:creator>
+    <dct:bibliographicCitation>Franck Michel, Loïc Djimenou, Catherine Faron Zucker, Johan Montagnat. Translation of Relational and Non-Relational Databases into RDF with xR2RML. Proceedings of the WebIST'15 Conference, 2015, Lisbon, Portugal. pp.443-454</dct:bibliographicCitation>
+    <rdf:type rdf:resource="https://data.archives-ouvertes.fr/doctype/Article"/>
+    <dce:creator>Loïc Djimenou</dce:creator>
+    <rdf:type rdf:resource="http://schema.org/ScholarlyArticle"/>
+    <schema:author>Franck Michel</schema:author>
+    <schema:author>Loïc Djimenou</schema:author>
     <bibo:doi>10.5220/0005448304430454</bibo:doi>
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2015-01-01</dct:issued>
-    <schema:author>Loïc Djimenou</schema:author>
-    <dct:bibliographicCitation>Franck Michel, Loïc Djimenou, Catherine Faron Zucker, Johan Montagnat. Translation of Relational and Non-Relational Databases into RDF with xR2RML. Proceedings of the WebIST'15 Conference, 2015, Lisbon, Portugal. pp.443-454</dct:bibliographicCitation>
-    <schema:author>Franck Michel</schema:author>
-    <rdf:type rdf:resource="https://data.archives-ouvertes.fr/doctype/Article"/>
-    <schema:sameAs rdf:resource="https://hal.archives-ouvertes.fr/hal-01207828"/>
-    <rdf:type rdf:resource="http://schema.org/ScholarlyArticle"/>
-    <dce:creator>Johan Montagnat</dce:creator>
-    <dce:creator>Loïc Djimenou</dce:creator>
-    <dct:title>Translation of Relational and Non-Relational Databases into RDF with xR2RML</dct:title>
-    <schema:about rdf:resource="http://ns.inria.fr/covid19/xR2RML"/>
     <schema:author>Johan Montagnat</schema:author>
   </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/ProvenanceEF">
+    <prov:wasAssociatedWith rdf:resource="https://github.com/kermitt2/entity-fishing"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <prov:used rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/xR2RML">
+    <dct:title>Morph-xR2RML</dct:title>
+    <rdfs:label>Morph-xR2RML</rdfs:label>
+    <dce:creator>Franck Michel</dce:creator>
+    <schema:subjectOf rdf:resource="http://ns.inria.fr/covid19/hal01207828"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
+    <schema:author>Franck Michel</schema:author>
+    <owl:versionInfo>1.1-RC2</owl:versionInfo>
+    <foaf:homepage rdf:resource="https://github.com/frmichel/morph-xr2rml/"/>
+    <dct:description>Implementation of the xR2RML mapping language for MongoDB</dct:description>
+    <dct:licence rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/NCBOAnnotator">
+    <prov:wasAssociatedWith rdf:resource="http://bioportal.bioontology.org/annotator"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+    <prov:used rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/cord19v6">
+    <schema:url rdf:resource="https://www.kaggle.com/dataset/08dd9ead3afd4f61ef246bfd6aee098765a19d9f6dbf514f0142965748be859b/version/6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <schema:name>COVID-19 Open Research Dataset (CORD-19)</schema:name>
+    <schema:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-03</schema:datePublished>
+    <rdf:type rdf:resource="http://schema.org/Dataset"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020-04-03</dct:issued>
+    <owl:versionInfo>6</owl:versionInfo>
+    <dct:title>COVID-19 Open Research Dataset (CORD-19)</dct:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.cnrs.fr">
+    <foaf:name>CNRS</foaf:name>
+    <schema:name>CNRS</schema:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/property/hasTitle">
+    <dct:description>Links a work to its title</dct:description>
+    <rdfs:label>resource representing a document's title</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#part"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://ns.inria.fr/covid19/DocumentBody">
+    <rdfs:label>document body</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <dct:description>A work's body, e.g. the main part of a research article</dct:description>
     <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Work"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label>document body</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/property/hasBody">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <dct:description>Links a work to its body, e.g. the main part of a research article</dct:description>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#part"/>
+    <rdfs:label>resource representing a document's body</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="http://ns.inria.fr/covid19/property/confidence">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
-    <dct:description>Confidence score obtained during the named entity recognition process</dct:description>
     <rdfs:label>entity confidence score</rdfs:label>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/ProvenanceDBpSpotlight">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <prov:wasAssociatedWith rdf:resource="https://www.dbpedia-spotlight.org/"/>
-    <prov:used rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/property/hasTitle">
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#part"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label>resource representing a document's title</rdfs:label>
-    <dct:description>Links a work to its title</dct:description>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://www.cnrs.fr">
-    <schema:name>CNRS</schema:name>
-    <foaf:name>CNRS</foaf:name>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/property/hasBody">
-    <rdfs:label>resource representing a document's body</rdfs:label>
-    <dct:description>Links a work to its body, e.g. the main part of a research article</dct:description>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#part"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/NCBOAnnotator">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <prov:wasAssociatedWith rdf:resource="http://bioportal.bioontology.org/annotator"/>
-    <prov:used rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+    <dct:description>Confidence score obtained during the named entity recognition process</dct:description>
   </rdf:Description>
   <rdf:Description rdf:about="http://univ-cotedazur.fr">
     <schema:name>University Côte d'Azur</schema:name>
     <foaf:name>University Côte d'Azur</foaf:name>
   </rdf:Description>
-  <rdf:Description rdf:about="http://ns.inria.fr/covid19/ProvenanceEF">
-    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
-    <prov:wasAssociatedWith rdf:resource="https://github.com/kermitt2/entity-fishing"/>
+  <rdf:Description rdf:about="https://www.inria.fr">
+    <schema:name>Inria</schema:name>
+    <foaf:name>Inria</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ns.inria.fr/covid19/ProvenanceDBpSpotlight">
+    <prov:wasAssociatedWith rdf:resource="https://www.dbpedia-spotlight.org/"/>
     <prov:used rdf:resource="http://ns.inria.fr/covid19/cord19v6"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
   </rdf:Description>
 </rdf:RDF>

@@ -1,0 +1,73 @@
+# example
+
+# from HypothesisKeywordInstances.ttl
+
+<http://example.org/hypothesis_ontology/PMC6122562#Hypothesis> hyp:contains <http://example.org/hypothesis_ontology/1b29813d-2201-4cdb-9cb9-3eb355c808af#Keyword>,
+        <http://example.org/hypothesis_ontology/381bf68f-9d22-4518-bedf-443fd76ef302#Keyword>,
+        <http://example.org/hypothesis_ontology/8ec82eaa-4c80-423a-a14f-5239dd291862#Keyword>,
+        <http://example.org/hypothesis_ontology/a8ca4ddf-4f11-4fae-b444-191a83cac380#Keyword>,
+        <http://example.org/hypothesis_ontology/b64f66dc-a38e-48cc-b03a-0e8f2c3f08b0#Keyword>,
+        <http://example.org/hypothesis_ontology/db92bed8-17d7-4109-a834-fcab94be5ab3#Keyword> ;
+    rdf:value "Our primary hypothesis was that respiratory viruses were important causative pathogens in severe CAP and was associated with increased mortality when present with bacterial pathogens in mixed viral-bacterial co-infections." ;
+    oa:hasSource <http://ns.inria.fr/covid19/1b64cf541af6560335b092dc63f67dd4cd81691a#abstract>
+
+<http://example.org/hypothesis_ontology/381bf68f-9d22-4518-bedf-443fd76ef302#Keyword> oa:hasTarget "mixed viral-bacterial co-infections" .
+<http://example.org/hypothesis_ontology/1b29813d-2201-4cdb-9cb9-3eb355c808af#Keyword> oa:hasTarget "bacterial pathogens"
+<http://example.org/hypothesis_ontology/8ec82eaa-4c80-423a-a14f-5239dd291862#Keyword> oa:hasTarget "severe CAP" .
+<http://example.org/hypothesis_ontology/a8ca4ddf-4f11-4fae-b444-191a83cac380#Keyword> oa:hasTarget "important causative pathogens" .
+<http://example.org/hypothesis_ontology/b64f66dc-a38e-48cc-b03a-0e8f2c3f08b0#Keyword> oa:hasTarget "increased mortality" .
+<http://example.org/hypothesis_ontology/db92bed8-17d7-4109-a834-fcab94be5ab3#Keyword> oa:hasTarget "respiratory viruses" .
+
+
+# from bnode_graph.ttl
+
+<http://ns.inria.fr/covid19/1b64cf541af6560335b092dc63f67dd4cd81691a#abstract> hyp:contains <https://krr.triply.cc/.well-known/genid/2dbeaf1416fde103bcd02fd23f73b06d>,
+        <https://krr.triply.cc/.well-known/genid/c9885da1fa233d4ad521cbb8953b42d6>,
+        <https://krr.triply.cc/.well-known/genid/d1471639e64c73fc6e91fedbd79c761b>,
+        <https://krr.triply.cc/.well-known/genid/dd978ea25214a19114cc255de921fa0a>,
+        <https://krr.triply.cc/.well-known/genid/fccbd6d84f085f40bfcd0f8214fc3de8> .
+
+
+        <https://krr.triply.cc/.well-known/genid/2dbeaf1416fde103bcd02fd23f73b06d> a <http://www.w3.org/ns/prov#Entity> ;
+            covidpr:confidence 1.0265 ;
+            dct:subject "Computer_Science",
+                "Statistics" ;
+            oa:hasBody <http://www.wikidata.org/entity/Q1132755> ;
+            oa:hasTarget "logistic regression" .
+
+        <https://krr.triply.cc/.well-known/genid/c9885da1fa233d4ad521cbb8953b42d6> a <http://www.w3.org/ns/prov#Entity> ;
+                covidpr:confidence 1 ;
+                dct:subject "Animal_Husbandry",
+                    "Health",
+                    "Medicine" ;
+                oa:hasBody <http://www.wikidata.org/entity/Q12125> ;
+                oa:hasTarget "respiratory viruses" .
+
+        <https://krr.triply.cc/.well-known/genid/d1471639e64c73fc6e91fedbd79c761b> a <http://www.w3.org/ns/prov#Entity> ;
+            covidpr:confidence 1 ;
+            dct:subject "Biology" ;
+            oa:hasBody <http://www.wikidata.org/entity/Q808> ;
+            oa:hasTarget "viral" .
+
+        <https://krr.triply.cc/.well-known/genid/dd978ea25214a19114cc255de921fa0a> a <http://www.w3.org/ns/prov#Entity> ;
+            covidpr:confidence 1 ;
+            dct:subject "Health",
+                "Medicine" ;
+            oa:hasBody <http://www.wikidata.org/entity/Q460030> ;
+            oa:hasTarget "community-acquired pneumonia" .  # note that this is what CAP stands for
+
+
+        <https://krr.triply.cc/.well-known/genid/fccbd6d84f085f40bfcd0f8214fc3de8> a <http://www.w3.org/ns/prov#Entity> ;
+            covidpr:confidence 1 ;
+            dct:subject "Biology" ;
+            oa:hasBody <http://www.wikidata.org/entity/Q808> ;
+            oa:hasTarget "viral" .
+
+
+# from mesh_graph.ttl
+
+- 57 viral
+
+<http://id.nlm.nih.gov/mesh/M0001361> rdfs:label "Antibodies, Viral"@en .
+<http://id.nlm.nih.gov/mesh/M0587614> rdfs:label "Viral Fusion Protein Inhibitors"@en .
+<http://id.nlm.nih.gov/mesh/M0497672> rdfs:label "viral FLIP protein, Molluscum contagiosum virus"@en .
